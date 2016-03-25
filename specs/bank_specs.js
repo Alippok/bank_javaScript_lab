@@ -43,5 +43,14 @@ describe("Bank", function(){
     assert.deepEqual([account1, account2, account3, account4, account5, account6], bank2.searchAccounts());
   });
 
+  it("should not permanently remove accounts from accounts holder when search function is used", function(){
+    
+    bank2.searchAccounts();
+    assert.deepEqual([account1, account2, account3, account4, account5, account6], bank2.accountsHolder);
+
+  });
+
+
+
 
 });
