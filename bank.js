@@ -16,7 +16,18 @@ Bank.prototype = {
       tempHolder.push(account);
     });
     return tempHolder;
+  },
+  retrieveAccountsNamed: function(name){
+    var tempHolder = this.searchAccounts();
+    var result = [];
+    
+    tempHolder.forEach(function(account){
+      if (account.ownerName === name)
+        result.push(account);
+    });
+    return result
   }
+
 };
 
 

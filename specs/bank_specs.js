@@ -50,6 +50,10 @@ describe("Bank", function(){
 
   });
 
+  it("should be able to retrieve all accounts owned by one person", function(){
+    assert.deepEqual([account1], bank2.retrieveAccountsNamed("Draco Malfoy"))
+  });
+
 
 
 
