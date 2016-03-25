@@ -9,6 +9,13 @@ var Bank = function(name){
 Bank.prototype = {
   addAccount: function(account){
     this.accountsHolder.push(account);
+  },
+  searchAccounts: function(){
+    var tempHolder = [];
+    this.accountsHolder.forEach(function(account){
+      tempHolder.push(account);
+    });
+    return tempHolder;
   }
 };
 

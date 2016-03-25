@@ -10,6 +10,14 @@ var account4 = new Account("Harry Potter", 250, 'muggle')
 var account5 = new Account("Hermoine Grainger", 500, 'muggle')
 var account6 = new Account("Mr Weasley", 3000, 'ministerial')
 
+var bank2 = new Bank("Velmstaus")
+bank2.addAccount(account1);
+bank2.addAccount(account2);
+bank2.addAccount(account3);
+bank2.addAccount(account4);
+bank2.addAccount(account5);
+bank2.addAccount(account6);
+
 describe("Bank", function(){
   
   it("should have a name", function(){
@@ -26,16 +34,14 @@ describe("Bank", function(){
   });
 
   it("should be able to hold multiple accounts", function(){
-    var bank2 = new Bank("Velmstaus")
-    bank2.addAccount(account1);
-    bank2.addAccount(account2);
-    bank2.addAccount(account3);
-    bank2.addAccount(account4);
-    bank2.addAccount(account5);
-    bank2.addAccount(account6);
+   
     assert.deepEqual([account1, account2, account3, account4, account5, account6], bank2.accountsHolder);
   });
 
+  it("should be able to search and return all accounts ready for filtering", function(){    
+
+    assert.deepEqual([account1, account2, account3, account4, account5, account6], bank2.searchAccounts());
+  });
 
 
 });
