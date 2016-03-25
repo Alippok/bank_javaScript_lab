@@ -20,6 +20,11 @@ describe("Bank", function(){
     assert.deepEqual([], bank1.accountsHolder);
   });
 
+  it("should be able to add an account", function(){
+    bank1.addAccount(account1)
+    assert.deepEqual([account1], bank1.accountsHolder)
+  });
+
 
 
 });
