@@ -25,6 +25,17 @@ describe("Bank", function(){
     assert.deepEqual([account1], bank1.accountsHolder)
   });
 
+  it("should be able to hold multiple accounts", function(){
+    var bank2 = new Bank("Velmstaus")
+    bank2.addAccount(account1);
+    bank2.addAccount(account2);
+    bank2.addAccount(account3);
+    bank2.addAccount(account4);
+    bank2.addAccount(account5);
+    bank2.addAccount(account6);
+    assert.deepEqual([account1, account2, account3, account4, account5, account6], bank2.accountsHolder);
+  });
+
 
 
 });
