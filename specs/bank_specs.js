@@ -13,8 +13,12 @@ var account6 = new Account("Mr Weasley", 3000, 'ministerial')
 describe("Bank", function(){
   
   it("should have a name", function(){
-    assert.equal("Gringotts", bank1.name)
-  })
+    assert.equal("Gringotts", bank1.name);
+  });
+
+  it("should have an accounts holder", function(){
+    assert.deepEqual([], bank1.accountsHolder);
+  });
 
 
 
